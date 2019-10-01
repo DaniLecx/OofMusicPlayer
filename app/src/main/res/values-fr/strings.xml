@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lecteur musical Oof</string>
+    <string name="play_button">Jouer une musique</string>
+    <string name="previous_button">Musique précédente</string>
+    <string name="next_button">Musique suivante</string>
+    <string name="seekBar">Barre de position de la musique</string>
+    <string name="downloading">Téléchargement %1$d/%2$d … %3$d%%</string>
+    <string name="menu_settings">Paramètres</string>
+    <string name="cd_previous">Lire chanson précédente</string>
+    <string name="cd_play">Lecture et pause</string>
+    <string name="cd_next">Lire chanson suivante</string>
+    <string name="repeat_button">"Répéter la chanson "</string>
+    <string name="shuffle_button">Lecture aléatoire</string>
+    <string name="downloadAllDialogTitle">Tout télécharger</string>
+    <string name="downloadAllDialogMessage">Voulez-vous télécharger toutes les musiques? Le téléchargement peut prendre quelques minutes.</string>
+    <string name="downloadAllDialogPositive">Oui</string>
+    <string name="downloadAllDialogNegative">Non</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="menu">Menu</string>
+</resources>

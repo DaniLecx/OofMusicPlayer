@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">OofMusicPlayer</string>
+    <string name="play_button">Play music</string>
+    <string name="previous_button">Previous music</string>
+    <string name="next_button">Next music</string>
+    <string name="seekBar">Seek music position</string>
+    <string name="default_seek" translatable="false">0:00</string>
+
+    <string name="app_version_number" translatable="false">1.0</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="cd_previous">Skip backwards</string>
+    <string name="cd_play">Play and pause</string>
+    <string name="cd_next">Skip forward</string>
+    <string name="repeat_button">Loop current music</string>
+    <string name="shuffle_button">Play music randomly</string>
+
+    <string name="adAppId" translatable="false">ca-app-pub-9293138493605489~8543845792</string>
+    <string name="adUnitId" translatable="false">ca-app-pub-9293138493605489/4253907104</string>
+    <string name="downloading">Downloading %1$d/%2$d … %3$d%%</string>
+    <string name="downloadAllDialogTitle">Download everything</string>
+    <string name="downloadAllDialogMessage">Do you want to download all the musics? Downloading may take a few minutes.</string>
+    <string name="downloadAllDialogPositive">Yes</string>
+    <string name="downloadAllDialogNegative">No</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="menu">Menu</string>
+
+</resources>
