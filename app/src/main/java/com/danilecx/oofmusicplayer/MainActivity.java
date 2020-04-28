@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Get a list of song titles from github api json
-        urlListNames = "https://api.github.com/repos/danilecx/OofMusicAssets/contents/assets";
+        // Get a list of song titles from github api
+        urlListNames = "https://api.github.com/repos/danilecx/OofMusicPlayer/contents/assets";
         List<String> nameList = new ArrayList<>();
         try {
             nameList = new JsonParser().execute(urlListNames).get();
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (nameList.isEmpty()) {
-            // Add internal files to array if device offline
+            // Show songs stored in internal files if device is offline
             String internalPath = this.getApplicationContext().getFilesDir().getAbsolutePath();
             File mp3Files = new File(internalPath);
             for (File file : mp3Files.listFiles()) {
@@ -99,13 +99,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // Bind titles list to ListView
+        // Bind song titles to ListView
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1,
                 nameList);
         musicListView.setAdapter(adapter);
 
-        // Prepare mediaPlayer and play song when ListView item clicked
+        // Prepare mediaPlayer and play song when song is clicked
         musicListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Show privacy policy
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,10 +136,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        // Ask user to download all songs on first app launch
         boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("firstrun", true);
         if (firstrun) {
-//        if (true){
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
             builder.setTitle(getString(R.string.downloadAllDialogTitle));
@@ -175,10 +175,6 @@ public class MainActivity extends AppCompatActivity {
                     .putBoolean("firstrun", false)
                     .apply();
         }
-
-//        startService();
-
-
     }
 
     public void onPlayClick(View view) {
@@ -255,11 +251,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return haveConnectedWifi || haveConnectedMobile;
     }
-
-//    public void startService() {
-//        Intent serviceIntent = new Intent(MainActivity.this, NotificationService.class);
-//        serviceIntent.setAction(Constants.ACTION.STARTFOREGROUND_ACTION);
-//        startService(serviceIntent);
-//    }
 }
 

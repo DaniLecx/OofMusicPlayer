@@ -23,6 +23,7 @@ public class DownloadFile extends AsyncTask<String, Integer, String> {
 
     }
 
+    // Download X songs in parameter
     @Override
     protected String doInBackground(String... urlParams) {
         final MainActivity activity = activityReference.get();
@@ -35,7 +36,7 @@ public class DownloadFile extends AsyncTask<String, Integer, String> {
         }
 
         int count;
-        String baseURL = "https://raw.githubusercontent.com/DaniLecx/OofMusicAssets/master/assets/";
+        String baseURL = "https://raw.githubusercontent.com/DaniLecx/OofMusicPlayer/master/assets/";
         nbParams = urlParams.length;
         try {
             for (int nbSong = 1; nbSong < nbParams; nbSong++) {
@@ -71,6 +72,7 @@ public class DownloadFile extends AsyncTask<String, Integer, String> {
         return null;
     }
 
+    // Show progress on seekbar
     @Override
     protected void onProgressUpdate(Integer... progress) {
         MainActivity activity = activityReference.get();
@@ -85,6 +87,7 @@ public class DownloadFile extends AsyncTask<String, Integer, String> {
         //System.out.println(seekBar.getProgress());
     }
 
+    // Re-enable all buttons
     @Override
     protected void onPostExecute(String s) {
         final MainActivity activity = activityReference.get();
