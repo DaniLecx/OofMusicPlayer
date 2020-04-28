@@ -52,11 +52,6 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayerManager = new MediaPlayerManager(this);
         mediaPlayerManager.initialize();
 
-        // Initialize and load ads
-//        MobileAds.initialize(this, "@string/adAppId");
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        adView.loadAd(adRequest);
-
         // Seek music when dragging seekBar
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
